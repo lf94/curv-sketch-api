@@ -1,0 +1,44 @@
+let
+  Workplane =
+    { ctr = [0,0], pos = [0,0], pts = [[0,0]] };
+  workplane struct = struct;
+  center point plane =
+    workplane { ctr = point, pos = plane.pos, pts = plane.pts };
+  line pointRelative plane =
+    let p = plane.pos + pointRelative in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  lineTo pointAbsolute plane =
+    let p = pointAbsolute in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  vLine yRelative plane =
+    let p = [plane.pos.[X], plane.pos.[Y] + yRelative] in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  vLineTo yAbsolute plane =
+    let p = [plane.pos.[X], yAbsolute] in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  hLine xRelative plane =
+    let p = [plane.pos.[X] + xRelative, plane.pos.[Y]] in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  hLineTo xAbsolute plane =
+    let p = [xAbsolute, plane.pos.[Y]] in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  polarLine { distance, angle } plane =
+    let p = plane.pos + ((cis angle) * distance) in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  polarLineTo { distance, angle } plane =
+    let p = (cis angle) * distance in
+    workplane { ctr = plane.ctr, pos = p, pts = concat [plane.pts, [p]] };
+  move pointRelative plane =
+    let p = plane.pos + pointRelative in
+    workplane { ctr = plane.ctr, pos = p, pts = plane.pts};
+  moveTo pointAbsolute plane =
+    let p = plane.pos  + pointAbsolute in
+    workplane { ctr = plane.ctr, pos = p, pts = plane.pts};
+  close plane = polygon (plane.pts);
+in
+Workplane
+  >> vLine 3
+  >> polarLine { distance: 3, angle: (14*deg) }
+  >> vLine (-3)
+  >> hLine (-2)
+>> close

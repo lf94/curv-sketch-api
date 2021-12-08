@@ -15,17 +15,17 @@ Below is a list of CADQuery sketching function which will be implemented over ti
 
 |Function                                   | Description |
 --------------------------------------------|-------------
-| [ ] `center(x, y)                         ` | Shift local coordinates to the specified location.                                                                                    |
-| [ ] `lineTo(x, y[, forConstruction])      ` | Make a line from the current point to the provided point                                                                              |
-| [ ] `line(xDist, yDist[, forConstruction])` | Make a line from the current point to the provided point, using dimensions relative to the current point                              |
-| [ ] `vLine(distance[, forConstruction])   ` | Make a vertical line from the current point the provided distance                                                                     |
-| [ ] `vLineTo(yCoord[, forConstruction])   ` | Make a vertical line from the current point to the provided y coordinate.                                                             |
-| [ ] `hLine(distance[, forConstruction])   ` | Make a horizontal line from the current point the provided distance                                                                   |
-| [ ] `hLineTo(xCoord[, forConstruction])   ` | Make a horizontal line from the current point to the provided x coordinate.                                                           |
-| [ ] `polarLine(distance, angle[, …])      ` | Make a line of the given length, at the given angle from the current point                                                            |
-| [ ] `polarLineTo(distance, angle[, …])    ` | Make a line from the current point to the given polar coordinates                                                                     |
-| [ ] `moveTo([x, y])                       ` | Move to the specified point, without drawing.                                                                                         |
-| [ ] `move([xDist, yDist])                 ` | Move the specified distance from the current point, without drawing.                                                                  |
+| [x] `center(x, y)                         ` | Shift local coordinates to the specified location.                                                                                    |
+| [x] `lineTo(x, y[, forConstruction])      ` | Make a line from the current point to the provided point                                                                              |
+| [x] `line(xDist, yDist[, forConstruction])` | Make a line from the current point to the provided point, using dimensions relative to the current point                              |
+| [x] `vLine(distance[, forConstruction])   ` | Make a vertical line from the current point the provided distance                                                                     |
+| [x] `vLineTo(yCoord[, forConstruction])   ` | Make a vertical line from the current point to the provided y coordinate.                                                             |
+| [x] `hLine(distance[, forConstruction])   ` | Make a horizontal line from the current point the provided distance                                                                   |
+| [x] `hLineTo(xCoord[, forConstruction])   ` | Make a horizontal line from the current point to the provided x coordinate.                                                           |
+| [x] `polarLine(distance, angle[, …])      ` | Make a line of the given length, at the given angle from the current point                                                            |
+| [x] `polarLineTo(distance, angle[, …])    ` | Make a line from the current point to the given polar coordinates                                                                     |
+| [x] `moveTo([x, y])                       ` | Move to the specified point, without drawing.                                                                                         |
+| [x] `move([xDist, yDist])                 ` | Move the specified distance from the current point, without drawing.                                                                  |
 | [ ] `spline(listOfXYTuple[, tangents, …]) ` | Create a spline interpolated through the provided points (2D or 3D).                                                                  |
 | [ ] `parametricCurve(func[, N, start, …]) ` | Create a spline curve approximating the provided function.                                                                            |
 | [ ] `parametricSurface(func[, N, …])      ` | Create a spline surface approximating the provided function.                                                                          |
